@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Note App</title>
+    <script type="module" crossorigin src="/assets/index-Z95gmIMq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-vKe7Tsa6.css">
+  </head>
+  <body>
+    <div class="app">
+      <nav class="nav__section">
+        <h3 class="project__name h3-heading aclonica-regular">
+          <a href="index.html">Almdrasa-Notes</a>
+        </h3>
+        <button class="show__search-button"></button>
+        <form class="search-box">
+          <button class="search__icon"></button>
+          <input
+            type="search"
+            name="search__note"
+            placeholder="Search"
+            id="search__note"
+            value=""
+            class="search__note small-text"
+          />
+        </form>
+        <button class="menu"></button>
+        <ul class="links large-text">
+          <li class="notesLink active" rel="noopener noreferrer">
+            <button>notes</button>
+          </li>
+          <li href="#" class="addNotesLink" rel="noopener noreferrer">
+            <button>add notes</button>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-content">
+        <section id="notes" class="section__notes">
+          <div class="note__list">
+            <span class="list__arrow">&lt;</span>
+
+            <h4 class="pinnedNotes__header heding-h4">Pinned</h4>
+            <div class="pinned"></div>
+            <div class="notes__header">
+              <h4 class="heding-h4">notes</h4>
+            </div>
+            <div class="notes"></div>
+          </div>
+          <div class="note__preview"></div>
+        </section>
+        <section id="addNotes" class="section__addNotes">
+          <h1 class="h1-heading">Add Note</h1>
+          <form action="">
+            <label for="title" class="titleLabel">Title*</label>
+            <input type="text" name="title" class="titleInput" />
+            <label for="author" class="authorLabel">Author*</label>
+            <input type="text" name="author" class="authorInput" />
+            <label for="content" class="contentLabel">Your Note*</label>
+            <textarea name="content" class="contentInput"></textarea>
+            <div class="submit">
+              <input
+                type="submit"
+                class="add__button addNote"
+                value="Add Note"
+              />
+              <input
+                type="submit"
+                class="add__button addPinnedNote"
+                value="Add Pinned Note"
+              />
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+  </body>
+</html>
