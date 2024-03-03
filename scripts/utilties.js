@@ -13,7 +13,9 @@ let pinnedArr = [];
 let appMode = 'add';
 let targetUpdatingNote = '';
 export function getMode() {
-  appMode = localStorage.getItem('Mode');
+  if (localStorage.getItem('Mode')) {
+    appMode = localStorage.getItem('Mode');
+  }
   return appMode;
 }
 export function saveMode() {
