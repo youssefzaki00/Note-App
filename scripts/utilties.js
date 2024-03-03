@@ -16,7 +16,7 @@ export function getMode() {
   appMode = localStorage.getItem('Mode');
   return appMode;
 }
-function saveMode() {
+export function saveMode() {
   localStorage.setItem('Mode', appMode);
 }
 export function showAddNote() {
