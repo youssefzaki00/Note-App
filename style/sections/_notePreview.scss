@@ -1,0 +1,64 @@
+.note__preview {
+  @include responsive(phone) {
+    &.show {
+      display: block;
+      padding: 2rem;
+      width: 90%;
+    }
+  }
+  // position: fixed;
+  width: 100%;
+  grid-column: 2 / -1;
+  height: 100%;
+  padding: 6.9rem 9.9rem;
+  margin-top: 0;
+  padding-top: 6.9rem;
+  padding-right: 3.4rem;
+  @include responsive(phone) {
+    display: none;
+  }
+  &.close_list {
+    grid-column: 1 / -1;
+    // padding-top: 0;
+    margin-top: -6.9rem;
+  }
+  .note__title {
+    color: var(--color-light-primary);
+    // width: 50.7rem;
+    width: 100%;
+    margin-bottom: 1.2rem;
+  }
+  .note__auther {
+    color: var(--color-light-gray02);
+  }
+  .note__content {
+    margin-top: 3.9rem;
+    line-break: anywhere;
+  }
+  .updateButton {
+    position: absolute;
+    right: 6.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    height: 6.5rem;
+    font-size: 6.5rem;
+    box-shadow: 0 0.9rem 2.5rem 0 var(--color-light-accent);
+    color: var(--color-light-white);
+    background-color: var(--color-light-accent);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: var(--transition-timing);
+    -webkit-transition: var(--transition-timing);
+    -moz-transition: var(--transition-timing);
+    -ms-transition: var(--transition-timing);
+    -o-transition: var(--transition-timing);
+    &:hover {
+      background-color: var(--color-light-hover);
+    }
+  }
+}

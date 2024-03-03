@@ -1,0 +1,175 @@
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 11rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--font-family-Open-Sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 0;
+}
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 60rem) {
+      @content;
+    } //600px
+  }
+
+  @if $breakpoint == phone-mid {
+    @media only screen and (max-width: 70rem) {
+      @content;
+    } //700px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 80rem) {
+      @content;
+    } //800px
+  }
+
+  @if $breakpoint == laptop-mid-size {
+    @media only screen and (max-width: 108rem) {
+      @content;
+    } //1080px
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 120rem) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint == big-desktop-assoc {
+    @media only screen and (max-width: 144rem) {
+      @content;
+    } //1440px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 180rem) {
+      @content;
+    } //1800px
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: row;
+  @include responsive(phone) {
+    flex-direction: column;
+  }
+}
+
+input:focus,
+input:focus-within,
+input:focus-visible {
+  outline: none;
+  border: none;
+}
+.aclonica-regular {
+  font-family: "Aclonica", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h1-heading {
+  font-size: var(--heding-h1);
+  line-height: 3.1rem;
+  color: var(--color-text);
+}
+
+.h2-heading {
+  font-size: var(--heding-h2);
+  line-height: 2.4rem;
+  color: var(--color-text);
+}
+.h3-heading {
+  font-size: var(--heding-h3);
+  line-height: 2.7rem;
+  color: var(--color-text);
+}
+.h4-heading {
+  font-size: var(--heding-h4);
+  color: var(--color-text);
+}
+.small-text {
+  font-size: var(--small-text);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+
+  font-style: normal;
+  line-height: 2rem;
+}
+.large-text {
+  font-size: var(--large-text);
+  color: var(--color-text);
+
+  font-weight: var(--font-weight-medium);
+  font-style: normal;
+  line-height: 2.7rem;
+}
+a {
+  text-decoration: none;
+}
+.main-content {
+  width: 100%;
+}
+.note {
+  &.active,
+  &:hover {
+    background: var(--color-light-gray04);
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+  }
+  cursor: pointer;
+  padding: 1.1rem 1.6rem;
+  // margin-top: 1.6rem;
+  margin-bottom: 2rem;
+  transition: var(--transition-timing);
+  -webkit-transition: var(--transition-timing);
+  -moz-transition: var(--transition-timing);
+  -ms-transition: var(--transition-timing);
+  -o-transition: var(--transition-timing);
+
+  h3 {
+    color: var(--color-text);
+  }
+  p {
+    color: var(--color-light-gray02);
+    margin-top: 0.3rem;
+    margin-bottom: 1.6rem;
+  }
+  :last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .delete {
+      text-transform: capitalize;
+      color: var(--color-light-error);
+      transition: var(--transition-timing);
+      -webkit-transition: var(--transition-timing);
+      -moz-transition: var(--transition-timing);
+      -ms-transition: var(--transition-timing);
+      -o-transition: var(--transition-timing);
+
+      padding: 0.5rem;
+      &:hover {
+        color: var(--color-light-white);
+        background-color: var(--color-light-error);
+        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem;
+        -moz-border-radius: 0.5rem;
+        -ms-border-radius: 0.5rem;
+        -o-border-radius: 0.5rem;
+      }
+    }
+    .date {
+      color: var(--color-light-gray02);
+    }
+  }
+}
