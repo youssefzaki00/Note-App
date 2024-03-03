@@ -1,7 +1,10 @@
 import callEvents from './scripts/events';
-import { getData, getPinnedData, showNoteList } from './scripts/utilties';
+import {
+  getData, getPinnedData, saveData, showNoteList,
+} from './scripts/utilties';
 
-getPinnedData();
 getData();
+saveData();
+getPinnedData();
 showNoteList();
 callEvents();
